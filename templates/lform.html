@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>function required()
+{
+var empt = document.form1.username.value;
+if (empt === "")
+{
+alert("Please input a Value");
+return false;
+}
+else
+{
+alert('Code has accepted : you can try another');
+return true;
+}
+}</script>
+    <style>
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+h1{
+text-align:center;
+}
+.aa a{
+ text-decoration: none;
+}
+.container{
+font-family:Comic Sans MS;
+font-size:large;
+}
+.aa{
+font-size:large;
+}
+
+    </style>
+</head>
+<body>
+<form action="table" name="form1" onsubmit="required()" method="post" enctype="multipart/form-data">
+     <div class="imgcontainer">
+    <img src="{% static 'cake.png' %}" alt="Avatar" class="avatar">
+  </div>
+      <div class="container">
+
+      username<input type="text" placeholder="username" name="username"><br>
+      password<input type="text" placeholder="password" name="password"><br>
+        <button type="submit">Login</button>
+
+           </div>
+       {% csrf_token %}
+    <h1>OR</h1>
+    <div class="aa">
+        <h5>didnt have an account?</h5>
+        <a href="form">sign up.</a>
+
+    </div>
+</form>
+
+</body>
+</html>

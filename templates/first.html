@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static%}
+</head>
+<style>
+    #ab{
+    background-image:url("{% static 'img_2.png'%}");
+    background-repeat:no-repeat;
+  background-size:1350px 650px;
+    background-attachment:fixed
+    }
+
+    body{
+    color:gold;
+    font-family:Times,serif;}
+    .cd{
+    overflow:hidden;
+    background-color:green;
+
+    }
+    .cd a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 103px;
+  text-decoration: none;
+  border:1px solid white
+}
+.bb a{
+float: left;
+  display: block;
+  color: white;
+  background-color:red;
+  padding: 12px 80px;
+  border:1px solid white
+  text-decoration: none;}
+
+h1,h3{
+ font-size:60px;
+ opacity:0.7;}
+
+
+
+</style>
+<body id="ab">
+
+<div class="cd">
+  <a href="one">home</a>
+  <a href="cab">shop</a>
+
+     <a href="orders">my cart</a>
+     <a href="new">my profile</a>
+
+</div>
+<h1>100 varities of cakes are here!!</h1>
+<h3>budget friendly rates</h3>
+
+
+</body>
+</html>
